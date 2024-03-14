@@ -1,4 +1,4 @@
-//third codes of fifth circuit
+//second codes of fifth circuit
 #include <LiquidCrystal.h>
 const int pot=A0;
 float value;
