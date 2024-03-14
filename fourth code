@@ -1,0 +1,16 @@
+//fourth code of sixth circuit
+void setup()
+{
+  pinMode(A3, INPUT);
+  pinMode(11, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  float value=analogRead(A3);
+  float volt=value*5/1023;
+  int speed=map(volt, 0, 0.8, 0, 255);
+  analogWrite(11, speed);
+  Serial.println(speed);
+}
