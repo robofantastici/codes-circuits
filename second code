@@ -1,21 +1,27 @@
 //second code of fourth circuit
-int motorPin = 3;
-void setup()
-{
-pinMode (motorPin, OUTPUT);
-Serial.begin(9600);
-while (! Serial);
-Serial.println("Speed 0 to 255");
+#include <LiquidCrystal.h>
+const int pot=A0;
+float value;
+
+const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup() {
+
+  lcd.begin(16, 2);
+  pinMode(pot,INPUT);
 }
-void loop()
-{
-if (Serial.available())
-{
-int speed = Serial.parseInt();
-if (speed >= 0 && speed <= 255)
-{
-analogWrite(motorPin, speed);
-}
-delay(1000);
-}
+
+void loop() {
+
+    lcd.setCursor(0, 0);
+
+    value=analogRead(pot);
+    lcd.print("Value is: ");
+    lcd.print(value);
+
+    delay(500);
+
+
+
 }
