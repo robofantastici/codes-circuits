@@ -1,4 +1,4 @@
-//second circuit of fourth circuit
+//second code of fourth circuit
 int motorPin = 3;
 void setup()
 {
