@@ -1,4 +1,4 @@
-//first code of thirth circuit
+//first code of third circuit
 const int motore=3;
 
 void setup() {
