@@ -1,0 +1,16 @@
+// third code of fifth circuit
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+  float value=analogRead(A0);
+  float volt=value*5/1023;
+  
+  if (volt > 0,5){
+    digitalWrite(11, HIGH);
+  }
+}
